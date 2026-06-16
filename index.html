@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<script type="application/json" id="cowork-artifact-meta">
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
   "name": "Mi Economia Auto",
   "schemaVersion": 1,
@@ -192,8 +191,8 @@
 
 <script>
 // ===== Ganancia del negocio en USD (la tarea automática actualiza esto desde tu Google Sheet) =====
-const NEGOCIO = { neta: 397.51, metaPct: 4.0, actualizado: "2026-06-15 · 22:47" };
-const DAILY_GAN_USD = { 1:117.82, 2:101.87, 3:177.82 };
+const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-15 · 23:10" };
+const DAILY_GAN_USD = { 1:117.81, 2:101.87, 3:177.82 };
 const DETALLE = {
   rows: [
     {f:"2026-05-01",p:"🇵🇪 Perú",pr:"Día de la Madre",g:76.32},
@@ -273,6 +272,7 @@ const PAISES = ["🇵🇪 Perú","🇵🇾 Paraguay","🇨🇴 Colombia","🇦�
 // tipo: "consumo" | "plin" | "transfer" ; amount SIEMPRE en soles (los US$ ya vienen convertidos)
 const TC = 3.45;
 const GASTOS = [
+  { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"BIM-MARGARITA MAMANI",     amount:5.00,   isUsd:false, original:null },
   { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"BCP*Pollos a la leña",     amount:4.80,   isUsd:false, original:null },
   { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"IZI*FAMILYFARMA",          amount:2.00,   isUsd:false, original:null },
   { fecha:"2026-06-13", banco:"Interbank", tipo:"consumo", comercio:"IZI*LA RICA WAT",          amount:25.00,  isUsd:false, original:null },
