@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Mi Economia Auto",
+  "schemaVersion": 1,
+  "description": "Dashboard de finanzas automático. Lee en vivo los consumos con tarjeta de los correos de Interbank (Gmail) y los muestra como gastos del mes en S/ y US$. Caja estimada = saldo inicial − gastos. Ganancia del negocio (US$) viene de la hoja de Google Sheets, actualizada por una tarea diaria.",
+  "mcpTools": [
+    "mcp__d15d8b36-b9dc-459a-ad63-57cce969180b__search_threads"
+  ],
+  "mcpServerNames": [
+    "Gmail"
+  ]
+}
+</script>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -179,8 +192,8 @@
 
 <script>
 // ===== Ganancia del negocio en USD (la tarea automática actualiza esto desde tu Google Sheet) =====
-const NEGOCIO = { neta: 397.51, metaPct: 4.0, actualizado: "2026-06-15 · 22:47" };
-const DAILY_GAN_USD = { 1:117.82, 2:101.87, 3:177.82 };
+const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-15" };
+const DAILY_GAN_USD = { 1:117.81, 2:101.87, 3:177.82 };
 const DETALLE = {
   rows: [
     {f:"2026-05-01",p:"🇵🇪 Perú",pr:"Día de la Madre",g:76.32},
@@ -260,6 +273,7 @@ const PAISES = ["🇵🇪 Perú","🇵🇾 Paraguay","🇨🇴 Colombia","🇦�
 // tipo: "consumo" | "plin" | "transfer" ; amount SIEMPRE en soles (los US$ ya vienen convertidos)
 const TC = 3.45;
 const GASTOS = [
+  { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"BIM-MARGARITA MAMANI HI",   amount:5.00,   isUsd:false, original:null },
   { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"BCP*Pollos a la leña",     amount:4.80,   isUsd:false, original:null },
   { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"IZI*FAMILYFARMA",          amount:2.00,   isUsd:false, original:null },
   { fecha:"2026-06-13", banco:"Interbank", tipo:"consumo", comercio:"IZI*LA RICA WAT",          amount:25.00,  isUsd:false, original:null },
@@ -335,7 +349,7 @@ function render(){
   document.getElementById("profitN").textContent = `Ganancia neta del mes · al ${NEGOCIO.actualizado}`;
   document.getElementById("metaV").textContent = (NEGOCIO.metaPct!=null?NEGOCIO.metaPct.toFixed(1):"—")+"%";
   document.getElementById("cajaV").textContent = fmtS(getSaldo() - total);
-  document.getElementById("statusTxt").textContent = "🕒 " + NEGOCIO.actualizado;
+  document.getElementById("statusTxt").textContent = NEGOCIO.actualizado;
 
   renderChart();
   renderTable(items);
