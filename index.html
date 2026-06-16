@@ -179,7 +179,7 @@
 
 <script>
 // ===== Ganancia del negocio en USD (la tarea automática actualiza esto desde tu Google Sheet) =====
-const NEGOCIO = { neta: 397.51, metaPct: 4.0, actualizado: "2026-06-15" };
+const NEGOCIO = { neta: 397.51, metaPct: 4.0, actualizado: "2026-06-15 · 22:47" };
 const DAILY_GAN_USD = { 1:117.82, 2:101.87, 3:177.82 };
 const DETALLE = {
   rows: [
@@ -335,7 +335,7 @@ function render(){
   document.getElementById("profitN").textContent = `Ganancia neta del mes · al ${NEGOCIO.actualizado}`;
   document.getElementById("metaV").textContent = (NEGOCIO.metaPct!=null?NEGOCIO.metaPct.toFixed(1):"—")+"%";
   document.getElementById("cajaV").textContent = fmtS(getSaldo() - total);
-  document.getElementById("statusTxt").textContent = NEGOCIO.actualizado;
+  document.getElementById("statusTxt").textContent = "🕒 " + NEGOCIO.actualizado;
 
   renderChart();
   renderTable(items);
