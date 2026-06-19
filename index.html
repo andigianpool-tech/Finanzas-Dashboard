@@ -191,7 +191,7 @@
 
 <script>
 // ===== Ganancia del negocio en USD (la tarea automática actualiza esto desde tu Google Sheet) =====
-const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-19 · 16:44" };
+const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-19 · 17:18" };
 const DAILY_GAN_USD = { 1:117.81, 2:101.87, 3:177.82 };
 const DETALLE = {
   rows: [
@@ -272,6 +272,7 @@ const PAISES = ["🇵🇪 Perú","🇵🇾 Paraguay","🇨🇴 Colombia","🇦�
 // tipo: "consumo" | "plin" | "transfer" ; amount SIEMPRE en soles (los US$ ya vienen convertidos)
 const TC = 3.45;
 const GASTOS = [
+      { fecha:"2026-06-19", banco:"Interbank", tipo:"plin", comercio:"Plin a Jean P Quispe C", amount:7.40, isUsd:false, original:null },
       { fecha:"2026-06-18", banco:"Interbank", tipo:"consumo", comercio:"PedidosYa*Nutritigers", amount:35.90, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a FRANCHESCA ISABEL HI NOJOZA REYES", amount:349.00, isUsd:false, original:null },
       { fecha:"2026-06-16", banco:"Interbank", tipo:"plin", comercio:"Plin a Gloria Pillaca V", amount:5.00, isUsd:false, original:null },
