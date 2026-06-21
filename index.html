@@ -191,7 +191,7 @@
 
 <script>
 // ===== Ganancia del negocio en USD (la tarea automática actualiza esto desde tu Google Sheet) =====
-const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-21 · 01:11" };
+const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-21 · 01:51" };
 const DAILY_GAN_USD = { 1:117.81, 2:101.87, 3:177.82 };
 const DETALLE = {
   rows: [
@@ -279,6 +279,7 @@ const GASTOS = [
       { fecha:"2026-06-20", banco:"Interbank", tipo:"plin", comercio:"Plin a Christian Contreras E", amount:16, isUsd:false, original:null },
       { fecha:"2026-06-19", banco:"Interbank", tipo:"plin", comercio:"Plin a Jean P Quispe C", amount:7.4, isUsd:false, original:null },
       { fecha:"2026-06-18", banco:"Interbank", tipo:"consumo", comercio:"PedidosYa*Nutritigers", amount:35.9, isUsd:false, original:null },
+      { fecha:"2026-06-18", banco:"BCP", tipo:"consumo", comercio:"PAYPAL *pkpadillapadill", amount:22.49, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a FRANCHESCA ISABEL HI NOJOZA REYES", amount:349, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:2.8, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:1.5, isUsd:false, original:null },
@@ -294,6 +295,18 @@ const GASTOS = [
       { fecha:"2026-06-15", banco:"Interbank", tipo:"plin", comercio:"Plin a Luis A Palmar V", amount:32, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"plin", comercio:"Plin a Adolfo A Ventura Z", amount:5.5, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"plin", comercio:"Plin a MARGARITA MAMANI HILASACA", amount:5, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Everson L Alejos A", amount:3, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a LUIS Vivanco Mendoza", amount:19, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Yadira Morales Q", amount:35, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Rosa Cahuaya Z", amount:9, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Adilmer Retete A", amount:14.6, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a SHEYLA DAVILA", amount:14, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Teodocia Gamboa O", amount:11.4, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Consuelo B Joaquin L", amount:16.5, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Bertha E Huamani T", amount:3.6, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Bertha E Huamani T", amount:4.4, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Anthony H Ceron L", amount:14, isUsd:false, original:null },
+      { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Joel A Morales Q", amount:100, isUsd:false, original:null },
       { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a JAIR LEONARDO REYES", amount:13, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"consumo", comercio:"IZI*LA RICA WAT*0058911", amount:25, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Samuel Abregu S", amount:55, isUsd:false, original:null },
@@ -351,7 +364,8 @@ const GASTOS = [
       { fecha:"2026-06-02", banco:"Interbank", tipo:"plin", comercio:"Plin a Marco A De-la-torre M", amount:30, isUsd:false, original:null },
       { fecha:"2026-06-01", banco:"Interbank", tipo:"consumo", comercio:"DTV*DIRECTVGO", amount:59, isUsd:false, original:null },
       { fecha:"2026-06-01", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:6, isUsd:false, original:null },
-      ];
+      { fecha:"2026-06-01", banco:"Interbank", tipo:"plin", comercio:"Plin a Giancarlo Quispe C", amount:4, isUsd:false, original:null },
+    ];
 
 const fmtS = n => "S/ " + n.toLocaleString("es-PE",{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmtU = n => "$" + n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
