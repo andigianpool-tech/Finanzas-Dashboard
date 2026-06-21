@@ -191,7 +191,7 @@
 
 <script>
 // ===== Ganancia del negocio en USD (la tarea automática actualiza esto desde tu Google Sheet) =====
-const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-21 · 01:51" };
+const NEGOCIO = { neta: 397.50, metaPct: 3.98, actualizado: "2026-06-21 · 03:50" };
 const DAILY_GAN_USD = { 1:117.81, 2:101.87, 3:177.82 };
 const DETALLE = {
   rows: [
@@ -279,7 +279,6 @@ const GASTOS = [
       { fecha:"2026-06-20", banco:"Interbank", tipo:"plin", comercio:"Plin a Christian Contreras E", amount:16, isUsd:false, original:null },
       { fecha:"2026-06-19", banco:"Interbank", tipo:"plin", comercio:"Plin a Jean P Quispe C", amount:7.4, isUsd:false, original:null },
       { fecha:"2026-06-18", banco:"Interbank", tipo:"consumo", comercio:"PedidosYa*Nutritigers", amount:35.9, isUsd:false, original:null },
-      { fecha:"2026-06-18", banco:"BCP", tipo:"consumo", comercio:"PAYPAL *pkpadillapadill", amount:22.49, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a FRANCHESCA ISABEL HI NOJOZA REYES", amount:349, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:2.8, isUsd:false, original:null },
       { fecha:"2026-06-17", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:1.5, isUsd:false, original:null },
@@ -291,6 +290,8 @@ const GASTOS = [
       { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"BIM-MARGARITA MAMANI HI", amount:5, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"BCP*Pollos a la lena ch", amount:4.8, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"IZI*FAMILYFARMA*0055382", amount:2, isUsd:false, original:null },
+      { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"CULQI QR*Pollos a la lena", amount:4.8, isUsd:false, original:null },
+      { fecha:"2026-06-15", banco:"Interbank", tipo:"consumo", comercio:"IZI*FAMILYFARMA1 SANTA ANITA", amount:2, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"plin", comercio:"Plin a Jose D Cueva Q", amount:14, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"plin", comercio:"Plin a Luis A Palmar V", amount:32, isUsd:false, original:null },
       { fecha:"2026-06-15", banco:"Interbank", tipo:"plin", comercio:"Plin a Adolfo A Ventura Z", amount:5.5, isUsd:false, original:null },
@@ -309,14 +310,15 @@ const GASTOS = [
       { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a Joel A Morales Q", amount:100, isUsd:false, original:null },
       { fecha:"2026-06-14", banco:"Interbank", tipo:"plin", comercio:"Plin a JAIR LEONARDO REYES", amount:13, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"consumo", comercio:"IZI*LA RICA WAT*0058911", amount:25, isUsd:false, original:null },
+      { fecha:"2026-06-13", banco:"Interbank", tipo:"consumo", comercio:"IZI*LARICAWATIA SANTA ANITA", amount:25, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Samuel Abregu S", amount:55, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Sandro P Vilchez V", amount:19.6, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Victoria A Huaman V", amount:7.5, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Heyson A Paz O", amount:34, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Pablo E Villalva V", amount:3, isUsd:false, original:null },
       { fecha:"2026-06-13", banco:"Interbank", tipo:"plin", comercio:"Plin a Maria K Victorio G", amount:8, isUsd:false, original:null },
-      { fecha:"2026-06-12", banco:"Interbank", tipo:"consumo", comercio:"WWW.TIGER-ROAR.NET", amount:20.67, isUsd:true, original:5.99 },
-      { fecha:"2026-06-12", banco:"Interbank", tipo:"consumo", comercio:"BITEL POSTBITELFIJO", amount:39.95, isUsd:false, original:null },
+      { fecha:"2026-06-12", banco:"Interbank", tipo:"consumo", comercio:"WWW.TIGER-ROAR.NET", amount:20.66, isUsd:true, original:5.99 },
+      { fecha:"2026-06-12", banco:"Interbank", tipo:"consumo", comercio:"BITEL", amount:39.95, isUsd:false, original:null },
       { fecha:"2026-06-12", banco:"Interbank", tipo:"plin", comercio:"Plin a Franchesca I Hinojoza R", amount:14.1, isUsd:false, original:null },
       { fecha:"2026-06-12", banco:"Interbank", tipo:"plin", comercio:"Plin a Freddy R Serrano C", amount:10.9, isUsd:false, original:null },
       { fecha:"2026-06-12", banco:"Interbank", tipo:"plin", comercio:"Plin a Joel A Morales Q", amount:1, isUsd:false, original:null },
@@ -361,9 +363,10 @@ const GASTOS = [
       { fecha:"2026-06-02", banco:"Interbank", tipo:"plin", comercio:"Plin a Lidia D Lazaro L", amount:3, isUsd:false, original:null },
       { fecha:"2026-06-02", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:13.8, isUsd:false, original:null },
       { fecha:"2026-06-02", banco:"Interbank", tipo:"plin", comercio:"Plin a Franchesca I Hinojoza R", amount:35, isUsd:false, original:null },
-      { fecha:"2026-06-02", banco:"Interbank", tipo:"plin", comercio:"Plin a Marco A De-la-torre M", amount:30, isUsd:false, original:null },
+      { fecha:"2026-06-02", banco:"Interbank", tipo:"plin", comercio:"Plin a Desconocido", amount:30, isUsd:false, original:null },
       { fecha:"2026-06-01", banco:"Interbank", tipo:"consumo", comercio:"DTV*DIRECTVGO", amount:59, isUsd:false, original:null },
       { fecha:"2026-06-01", banco:"Interbank", tipo:"plin", comercio:"Plin a Katterine A Hilario C", amount:6, isUsd:false, original:null },
+      { fecha:"2026-06-01", banco:"Interbank", tipo:"plin", comercio:"Plin a Giancarlo Quispe C", amount:4, isUsd:false, original:null },
     ];
 
 const fmtS = n => "S/ " + n.toLocaleString("es-PE",{minimumFractionDigits:2,maximumFractionDigits:2});
